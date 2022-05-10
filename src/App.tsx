@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
+import Header from './templates/Header';
+import Length from './molecules/Length';
+import Lowercase from './molecules/Lowercase';
+
+const App: React.FC = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header />
+      <div>
+        <Length />
+        
+      </div>
+
+    </>
+  )
 }
 
 export default App;
+
+// const [chars, setChars] = useState<string[]>([]);
+
+// form needs to output chars
+
+// then select a random character *length
+
+// then post it to field at the button
