@@ -24,7 +24,7 @@ const initialState: FormState = {
     numbers: false,
     special: false,
     availChars: '',
-    password: ''
+    password: 'p@s$w0rD'
 }
 
 export const formSlice = createSlice({
@@ -45,11 +45,20 @@ export const formSlice = createSlice({
         },
         updateLength: (state, action: PayloadAction<string>) => {
             state.length = action.payload
+        },
+        resetChars: state => {
+            state.availChars = ''
+        },
+        updateChars: (state, action: PayloadAction<string>) => {
+            state.availChars += action.payload
+        },
+        setPassword: (state, action: PayloadAction<string>) => {
+            state.password = action.payload
         }
     }
 })
 
-export const { toggleLowercase, toggleUppercase, toggleNumbers, toggleSpecial, updateLength } = formSlice.actions
+export const { toggleLowercase, toggleUppercase, toggleNumbers, toggleSpecial, updateLength, resetChars, updateChars, setPassword } = formSlice.actions
 export const getFormValues = (state: RootState) => state.form
 export default formSlice.reducer
 

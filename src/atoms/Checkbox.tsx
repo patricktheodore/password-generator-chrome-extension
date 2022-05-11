@@ -1,7 +1,5 @@
-import { AnyAction } from '@reduxjs/toolkit';
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../app/hooks';
-import { getFormValues, toggleLowercase } from '../templates/Form/formSlice';
+import { useAppDispatch } from '../app/hooks';
 
 interface CheckboxProps {
     name: string,
@@ -15,8 +13,6 @@ const Checkbox: React.FC<CheckboxProps> = ({ name, checkedStatus, action }) => {
 
     const handleChange = () => {
         dispatch(action())
-        console.log(`${name} === ${checkedStatus}`);
-        
     }
 
     return (
