@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import './App.css';
-
 import Header from './templates/Header';
 import Length from './molecules/Length';
-import Form from './templates/Form';
+import Form from './templates/Form/Form';
 import PasswordDisplay from './atoms/PasswordDisplay';
+import { useAppDispatch, useAppSelector } from './app/hooks';
+import { toggleLowercase, toggleNumbers, toggleSpecial, toggleUppercase, getFormValues } from './templates/Form/formSlice'
+import { getRoles } from '@testing-library/react';
+
 
 const App: React.FC = () => {
+
+  const passwordCriteria = useAppSelector(getFormValues);
+
+  console.log(passwordCriteria);
+  
 
   return (
     <div>
