@@ -3,19 +3,20 @@ import './App.css';
 
 import Header from './templates/Header';
 import Length from './molecules/Length';
-import Lowercase from './molecules/Lowercase';
+import Form from './templates/Form';
+import PasswordDisplay from './atoms/PasswordDisplay';
 
 const App: React.FC = () => {
 
   return (
-    <>
+    <div>
       <Header />
-      <div>
+      <div className='flex justify-center grid-cols-12 gap-4'>
         <Length />
-        
+        <Form />
       </div>
-
-    </>
+      <PasswordDisplay value={'hellllllllohellllllllohellllllllohellllllllohellllllllohellllllllo'}/>
+    </div>
   )
 }
 

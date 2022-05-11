@@ -10,10 +10,10 @@ const Length:React.FC = () => {
     }
     
     return (
-        <>
+        <div className='grid-col-12'>
             <InputLabel name={'Length'} htmlFor={'length'} /><span>({value})</span>
             <input type="range" id="length" name="length" min="8" max="120" className='' value={value} onChange={ (e) => {handleChange(e.target.value)}}></input>
-        </>
+        </div>
     )
 }
 
