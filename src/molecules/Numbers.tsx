@@ -1,12 +1,17 @@
 import React from 'react';
 import InputLabel from '../atoms/InputLabel';
 import Checkbox from '../atoms/Checkbox';
-import { toggleNumbers } from '../templates/Form/formSlice';
+import { getFormValues, toggleNumbers } from '../templates/Form/formSlice';
+import { useAppSelector } from '../app/hooks';
 
 const Numbers: React.FC = () => {
+
+    const state = useAppSelector(getFormValues)
+    const numberState = state.numbers
+
     return (
         <div className='grid-col-12'>
-            <Checkbox name={'numbers'} value={'1234567890'} action={toggleNumbers}/>
+            <Checkbox name={'numbers'} checkedStatus={numberState} action={toggleNumbers}/>
             <InputLabel name={"numbers"} htmlFor={'numbers'} />
         </div>
     )

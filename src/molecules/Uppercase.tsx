@@ -1,12 +1,17 @@
 import React from 'react';
 import InputLabel from '../atoms/InputLabel';
 import Checkbox from '../atoms/Checkbox';
-import { toggleUppercase } from '../templates/Form/formSlice';
+import { getFormValues, toggleUppercase } from '../templates/Form/formSlice';
+import { useAppSelector } from '../app/hooks';
 
 const Uppercase: React.FC = () => {
+
+    const state = useAppSelector(getFormValues)
+    const uppercaseState = state.uppercase
+
     return (
         <div className='grid-col-12'>
-            <Checkbox name={'uppercase'} value={'ABCDEFG'} action={toggleUppercase}/>
+            <Checkbox name={'uppercase'} checkedStatus={uppercaseState} action={toggleUppercase}/>
             <InputLabel name={"uppercase"} htmlFor={'uppercase'} />
         </div>
     )
