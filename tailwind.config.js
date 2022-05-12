@@ -9,9 +9,12 @@ module.exports = {
       },
       colors: {
         'background': '#303633',
-        'primary': '#002252',
-        'secondary': '#5CA0FF'
-      }
+        'primary': '#2a9d8f',
+        'secondary': '#24877B'
+      },
+      // backgroundImage: {
+      //   'waves': "url(./layered-waves-haikei.svg)"
+      // }
     },
   },
   plugins: [],

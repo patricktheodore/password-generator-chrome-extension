@@ -16,7 +16,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ name, payload }) => {
     }
     
     return (
-        <input className='form-check-input mr-4 h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer' 
+        <input className='form-check-input mr-4 h-4 w-4 border border-gray-300 rounded-sm bg-white accent-primary checked:bg-primary checked:border-secondary focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer' 
         type="checkbox" id={name} name={name} onChange={() => handleChange()} />
     )
 }

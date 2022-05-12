@@ -8,7 +8,7 @@ import Footer from './templates/Footer';
 const App: React.FC = () => {
 
   return (
-    <div className="flex-col h-max w-72 justify-center align-middle text-center text-white bg-background">
+    <div className="flex-col h-max w-72 justify-center align-middle text-center text-white bg-[url('../public/layered-waves-haikei.svg')]">
       <Header />
       <Length />
       <Form />

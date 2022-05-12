@@ -9,16 +9,16 @@ const Footer: React.FC = () => {
   const state = useAppSelector(getFormValues)
 
   return (
-    <div className='text-center justify-center'>
+    <div className='text-center justify-center pb-4'>
       <Button />
       <PasswordDisplay value={state.password} />
       <CopyButton />
 
-      <h1 className='text-xs text-center mt-8 mb-4 hover:underline font-light'>
+      {/* <h1 className='text-xs text-center mt-8 hover:underline font-light'>
         <a href='https://patricktheodore.github.io/patricktheodore-react-portfolio/' target='_blank' >
           patricktheodore
           </a>
-      </h1>
+      </h1> */}
     </div>
   )
 }

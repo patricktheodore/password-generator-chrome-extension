@@ -23,7 +23,7 @@ const Length:React.FC = () => {
             name="length" 
             min="8" 
             max="64" 
-            className='mx-12 mb-4 mt-2 form-range' 
+            className='mx-12 mb-4 mt-2 form-range accent-primary' 
             value={length} 
             onChange={ (e) => {handleChange(e.target.value)}} />
         </div>
