@@ -7,9 +7,9 @@ const Lowercase: React.FC = () => {
     const LOWERCASE: string = 'abcdefghijklmnopqrstuvwxyz';
 
     return (
-        <div className='grid-col-12'>
+        <div>
             <Checkbox name={'lowercase'} payload={LOWERCASE}/>
-            <InputLabel name={"lowercase"} htmlFor={'lowercase'} />
+            <InputLabel name={"Lowercase"} htmlFor={'lowercase'} />
         </div>
     )
 }

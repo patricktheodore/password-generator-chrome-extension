@@ -8,12 +8,10 @@ import Footer from './templates/Footer';
 const App: React.FC = () => {
 
   return (
-    <div>
+    <div className="flex-col h-max w-72 justify-center align-middle text-center text-white bg-background">
       <Header />
-      <div className='flex justify-center grid-cols-12 gap-4'>
-        <Length />
-        <Form />
-      </div>
+      <Length />
+      <Form />
       <Footer />
     </div>
   )

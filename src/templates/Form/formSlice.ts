@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { Root } from 'react-dom/client';
 import type { RootState } from '../../app/store'
 
 interface FormState {
@@ -11,7 +10,7 @@ interface FormState {
 const initialState: FormState = {
     length: '20',
     availChars: [],
-    password: 'p@s$w0rD'
+    password: ''
 }
 
 export const formSlice = createSlice({

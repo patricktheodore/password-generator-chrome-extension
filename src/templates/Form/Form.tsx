@@ -14,14 +14,14 @@ const Form:React.FC = () => {
   const state = useAppSelector(getFormValues);
 
   return (
-    <>
+    <div className='grid gap-4 text-left ml-24 mb-4'>
       <Lowercase />
       <Uppercase />
       <Numbers />
       <Special />
-      <Button />
-      <PasswordDisplay value={state.password} />
-    </>
+      {/* <Button />
+      <PasswordDisplay value={state.password} /> */}
+    </div>
   )
 }
 

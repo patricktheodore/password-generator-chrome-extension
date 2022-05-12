@@ -7,9 +7,9 @@ const Uppercase: React.FC = () => {
     const UPPERCASE: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
     return (
-        <div className='grid-col-12'>
+        <div>
             <Checkbox name={'uppercase'}  payload={UPPERCASE}/>
-            <InputLabel name={"uppercase"} htmlFor={'uppercase'} />
+            <InputLabel name={"Uppercase"} htmlFor={'uppercase'} />
         </div>
     )
 }

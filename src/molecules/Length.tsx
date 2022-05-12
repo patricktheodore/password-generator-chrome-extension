@@ -15,9 +15,18 @@ const Length:React.FC = () => {
     }
     
     return (
-        <div className='grid-col-12'>
-            <InputLabel name={'Length'} htmlFor={'length'} /><span>({length})</span>
-            <input type="range" id="length" name="length" min="8" max="120" className='' value={length} onChange={ (e) => {handleChange(e.target.value)}}></input>
+        <div className='flex flex-col'>
+            <InputLabel name={'Length'} htmlFor={'length'} value={length}/>
+            {/* <span>({length})</span> */}
+            <input 
+            type="range" 
+            id="length" 
+            name="length" 
+            min="8" 
+            max="64" 
+            className='mx-12 mb-4 form-range' 
+            value={length} 
+            onChange={ (e) => {handleChange(e.target.value)}} />
         </div>
     )
 }
