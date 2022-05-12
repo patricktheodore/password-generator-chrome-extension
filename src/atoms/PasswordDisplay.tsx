@@ -9,8 +9,8 @@ const PasswordDisplay: React.FC<InputProps> = ({ value }) => {
     <>
       <textarea 
       id='passwordDisplay' 
-      cols={28}
-      rows={4} 
+      cols={32}
+      rows={3} 
       name='passwordDisplay' 
       value={value} 
       disabled 
