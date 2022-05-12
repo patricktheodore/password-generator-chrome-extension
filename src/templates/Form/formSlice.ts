@@ -13,7 +13,7 @@ interface FormState {
     uppercase: boolean
     numbers: boolean
     special: boolean
-    availChars: string
+    availChars: string[]
     password: string
 }
 
@@ -23,7 +23,7 @@ const initialState: FormState = {
     uppercase: false,
     numbers: false,
     special: false,
-    availChars: '',
+    availChars: [],
     password: 'p@s$w0rD'
 }
 
@@ -47,10 +47,14 @@ export const formSlice = createSlice({
             state.length = action.payload
         },
         resetChars: state => {
-            state.availChars = ''
+            state.availChars = ['']
         },
         updateChars: (state, action: PayloadAction<string>) => {
-            state.availChars += action.payload
+            if (!state.availChars.includes(action.payload)) {
+                state.availChars.push(action.payload);
+            } else { 
+                state.availChars.splice(state.availChars.indexOf(action.payload))
+            }
         },
         setPassword: (state, action: PayloadAction<string>) => {
             state.password = action.payload

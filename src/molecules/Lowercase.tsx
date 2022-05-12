@@ -8,12 +8,14 @@ import { useAppSelector } from '../app/hooks';
 
 const Lowercase: React.FC = () => {
 
+    const LOWERCASE: string = 'abcdefghijklmnopqrstuvwxyz';
+
     const state = useAppSelector(getFormValues)
     const lowercaseState = state.lowercase;
 
     return (
         <div className='grid-col-12'>
-            <Checkbox name={'lowercase'} checkedStatus={lowercaseState} action={toggleLowercase}/>
+            <Checkbox name={'lowercase'} checkedStatus={lowercaseState} action={toggleLowercase} payload={LOWERCASE}/>
             <InputLabel name={"lowercase"} htmlFor={'lowercase'} />
         </div>
     )

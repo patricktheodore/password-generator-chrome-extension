@@ -6,12 +6,14 @@ import { useAppSelector } from '../app/hooks';
 
 const Numbers: React.FC = () => {
 
+    const NUMBERS: string = '1234567890';
+
     const state = useAppSelector(getFormValues)
     const numberState = state.numbers
 
     return (
         <div className='grid-col-12'>
-            <Checkbox name={'numbers'} checkedStatus={numberState} action={toggleNumbers}/>
+            <Checkbox name={'numbers'} payload={NUMBERS} checkedStatus={numberState} action={toggleNumbers}/>
             <InputLabel name={"numbers"} htmlFor={'numbers'} />
         </div>
     )

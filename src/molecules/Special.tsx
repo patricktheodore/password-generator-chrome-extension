@@ -6,12 +6,14 @@ import { useAppSelector } from '../app/hooks';
 
 const Special: React.FC = () => {
 
+    const SPECIAL: string = `!"#$%&'()*+,-./:;<=>?@[}^_{|}~`;
+
     const state = useAppSelector(getFormValues)
     const specialState = state.special
 
     return (
         <div className='grid-col-12'>
-            <Checkbox name={'special'} checkedStatus={specialState} action={toggleSpecial}/>
+            <Checkbox name={'special'} checkedStatus={specialState} payload={SPECIAL} action={toggleSpecial}/>
             <InputLabel name={"special"} htmlFor={'special'} />
         </div>
     )
