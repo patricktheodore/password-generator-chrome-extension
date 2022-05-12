@@ -17,14 +17,13 @@ const Length:React.FC = () => {
     return (
         <div className='flex flex-col'>
             <InputLabel name={'Length'} htmlFor={'length'} value={length}/>
-            {/* <span>({length})</span> */}
             <input 
             type="range" 
             id="length" 
             name="length" 
             min="8" 
             max="64" 
-            className='mx-12 mb-4 form-range' 
+            className='mx-12 mb-4 mt-2 form-range' 
             value={length} 
             onChange={ (e) => {handleChange(e.target.value)}} />
         </div>

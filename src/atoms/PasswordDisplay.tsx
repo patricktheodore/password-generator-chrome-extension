@@ -14,7 +14,7 @@ const PasswordDisplay: React.FC<InputProps> = ({ value }) => {
       name='passwordDisplay' 
       value={value} 
       disabled 
-      className='bg-background block text-center mb-4 w-fit mx-8 resize-none'
+      className='bg-#303633 shadow-lg rounded block text-center mb-4 w-fit mx-8 resize-none'
       >  
       </textarea>
     </>

@@ -14,8 +14,10 @@ const Footer: React.FC = () => {
       <PasswordDisplay value={state.password} />
       <CopyButton />
 
-      <h1 className='text-xs text-center mt-8 mb-4'>
-        patricktheodore
+      <h1 className='text-xs text-center mt-8 mb-4 hover:underline font-light'>
+        <a href='https://patricktheodore.github.io/patricktheodore-react-portfolio/' target='_blank' >
+          patricktheodore
+          </a>
       </h1>
     </div>
   )
