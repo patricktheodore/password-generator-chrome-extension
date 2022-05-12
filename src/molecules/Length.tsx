@@ -1,19 +1,33 @@
 import React, { useState } from 'react';
 import InputLabel from '../atoms/InputLabel';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { updateLength, getFormValues } from '../templates/Form/formSlice';
 
 const Length:React.FC = () => {
     
-    const [value, setValue] = useState<string>('20');
+    const state = useAppSelector(getFormValues);
+    const length = state.length;
     
-    const handleChange = (newValue: string) => {
-        setValue(newValue)
+    const dispatch = useAppDispatch();
+    
+    const handleChange = (newLength: string) => {
+        dispatch(updateLength(newLength))
     }
     
     return (
-        <>
-            <InputLabel name={'Length'} htmlFor={'length'} /><span>({value})</span>
-            <input type="range" id="length" name="length" min="8" max="120" className='' value={value} onChange={ (e) => {handleChange(e.target.value)}}></input>
-        </>
+        <div className='flex flex-col'>
+            <InputLabel name={'Length'} htmlFor={'length'} value={length}/>
+            {/* <span>({length})</span> */}
+            <input 
+            type="range" 
+            id="length" 
+            name="length" 
+            min="8" 
+            max="64" 
+            className='mx-12 mb-4 form-range' 
+            value={length} 
+            onChange={ (e) => {handleChange(e.target.value)}} />
+        </div>
     )
 }
 

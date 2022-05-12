@@ -3,11 +3,14 @@ import InputLabel from '../atoms/InputLabel';
 import Checkbox from '../atoms/Checkbox';
 
 const Lowercase: React.FC = () => {
+
+    const LOWERCASE: string = 'abcdefghijklmnopqrstuvwxyz';
+
     return (
-        <>
-            <Checkbox name={'lowercase'} value={'abcdefg'} />
-            <InputLabel name={"lowercase"} htmlFor={'lowercase'} />
-        </>
+        <div>
+            <Checkbox name={'lowercase'} payload={LOWERCASE}/>
+            <InputLabel name={"Lowercase"} htmlFor={'lowercase'} />
+        </div>
     )
 }
 

@@ -3,11 +3,14 @@ import InputLabel from '../atoms/InputLabel';
 import Checkbox from '../atoms/Checkbox';
 
 const Uppercase: React.FC = () => {
+
+    const UPPERCASE: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
     return (
-        <>
-            <Checkbox name={'uppercase'} value={'ABCDEFG'} />
-            <InputLabel name={"uppercase"} htmlFor={'uppercase'} />
-        </>
+        <div>
+            <Checkbox name={'uppercase'}  payload={UPPERCASE}/>
+            <InputLabel name={"Uppercase"} htmlFor={'uppercase'} />
+        </div>
     )
 }
 

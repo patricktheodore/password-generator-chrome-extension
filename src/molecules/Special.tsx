@@ -3,11 +3,14 @@ import InputLabel from '../atoms/InputLabel';
 import Checkbox from '../atoms/Checkbox';
 
 const Special: React.FC = () => {
+
+    const SPECIAL: string = `!#$%&'()*+,./:;<=>@^_{|}`;
+
     return (
-        <>
-            <Checkbox name={'special'} value={'1234567890'} />
-            <InputLabel name={"special"} htmlFor={'special'} />
-        </>
+        <div>
+            <Checkbox name={'special'} payload={SPECIAL} />
+            <InputLabel name={"Special"} htmlFor={'special'} />
+        </div>
     )
 }
 
