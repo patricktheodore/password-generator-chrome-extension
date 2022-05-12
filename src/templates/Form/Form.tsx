@@ -6,52 +6,12 @@ import Uppercase from '../../molecules/Uppercase';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { getFormValues, resetChars, updateChars, setPassword } from './formSlice';
 import PasswordDisplay from '../../atoms/PasswordDisplay';
+import Button from '../../atoms/Button';
 
 
 const Form:React.FC = () => {
-  const LOWERCASE: string = 'abcdefghijklmnopqrstuvwxyz';
-  const UPPERCASE: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const NUMBERS: string = '1234567890';
-  const SPECIAL: string = `!"#$%&'()*+,-./:;<=>?@[}^_{|}~`;
-
   const dispatch = useAppDispatch();
   const state = useAppSelector(getFormValues);
-
-  const handleSubmit = () => {
-    dispatch(resetChars())
-    addChars()
-    handleGenerate()
-    console.log(state.availChars);
-  }
-
-  const addChars = () => {
-    if (state.lowercase === true) {
-      dispatch(updateChars(LOWERCASE))
-    }
-
-    if (state.uppercase === true) {
-      dispatch(updateChars(UPPERCASE))
-    }
-
-    if (state.numbers === true) {
-      dispatch(updateChars(NUMBERS))
-    }
-
-    if (state.special === true) {
-      dispatch(updateChars(SPECIAL))
-    }
-  }
-
-  const handleGenerate = () => {
-    let password: string = ''
-    console.log(state.availChars, state.password);
-
-    // for (var i = 0; i < state.availChars.length; i++) {
-    //   password += state.availChars.charAt(Math.floor(Math.random() * parseInt(state.length)))
-    // }
-    // dispatch(setPassword(password));
-  }
-
 
   return (
     <>
@@ -59,12 +19,9 @@ const Form:React.FC = () => {
       <Uppercase />
       <Numbers />
       <Special />
-      <button type='button' onClick={() => { handleSubmit() }}>
-        Generate Password
-      </button>
+      <Button />
       <PasswordDisplay value={state.password} />
     </>
-
   )
 }
 

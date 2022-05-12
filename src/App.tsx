@@ -3,6 +3,7 @@ import './App.css';
 import Header from './templates/Header';
 import Length from './molecules/Length';
 import Form from './templates/Form/Form';
+import Footer from './templates/Footer';
 
 const App: React.FC = () => {
 
@@ -13,6 +14,7 @@ const App: React.FC = () => {
         <Length />
         <Form />
       </div>
+      <Footer />
     </div>
   )
 }

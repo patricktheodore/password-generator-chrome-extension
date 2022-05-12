@@ -1,21 +1,14 @@
 import React from 'react';
 import InputLabel from '../atoms/InputLabel';
 import Checkbox from '../atoms/Checkbox';
-import { toggleLowercase } from '../templates/Form/formSlice';
-import { getFormValues } from '../templates/Form/formSlice';
-import { useAppSelector } from '../app/hooks';
-
 
 const Lowercase: React.FC = () => {
 
     const LOWERCASE: string = 'abcdefghijklmnopqrstuvwxyz';
 
-    const state = useAppSelector(getFormValues)
-    const lowercaseState = state.lowercase;
-
     return (
         <div className='grid-col-12'>
-            <Checkbox name={'lowercase'} checkedStatus={lowercaseState} action={toggleLowercase} payload={LOWERCASE}/>
+            <Checkbox name={'lowercase'} payload={LOWERCASE}/>
             <InputLabel name={"lowercase"} htmlFor={'lowercase'} />
         </div>
     )
